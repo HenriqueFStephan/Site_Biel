@@ -11,9 +11,13 @@ $service-premium-track-scale: 1.75;
     min-width: 0;
   }
 
+  h3 {
+    font-size: calc(1rem + 4px);
+  }
+
   .service-row__topics {
     margin: 0;
-    font-size: 0.875rem;
+    font-size: calc(0.875rem + 4px);
     color: $color-text-muted;
   }
 

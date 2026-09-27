@@ -52,6 +52,18 @@ describe('ServicesComponent', () => {
     expect(scss).toMatch(/\$service-premium-track-max \* \$service-premium-track-scale/);
   });
 
+  it('uses +4px font sizes for area titles and topic descriptions', () => {
+    const scss = readFileSync(join(__dirname, 'services.component.scss'), 'utf8');
+    expect(scss).toContain('font-size: calc(1rem + 4px)');
+    expect(scss).toContain('font-size: calc(0.875rem + 4px)');
+
+    const title = fixture.nativeElement.querySelector('.service-row h3') as HTMLElement;
+    const topics = fixture.nativeElement.querySelector('.service-row__topics') as HTMLElement;
+
+    expect(parseFloat(getComputedStyle(title).fontSize)).toBe(20);
+    expect(parseFloat(getComputedStyle(topics).fontSize)).toBe(18);
+  });
+
   it('renders an orange premium description box beside each service', () => {
     const row = fixture.nativeElement.querySelector('.service-row');
     const premium = row?.querySelector('.service-premium');
