@@ -1,5 +1,5 @@
 import { BlogPost } from '../../core/models';
-import { filterBlogPostsByTitle } from './blog-list.filter';
+import { filterBlogPosts, filterBlogPostsByArea, filterBlogPostsByTitle } from './blog-list.filter';
 
 const samplePosts: BlogPost[] = [
   {
@@ -12,6 +12,7 @@ const samplePosts: BlogPost[] = [
     source_type: 'agent_research',
     author_name: 'Author',
     published_at: '2026-01-01',
+    research_area: 'Medicinal',
   },
   {
     id: '2',
@@ -23,6 +24,7 @@ const samplePosts: BlogPost[] = [
     source_type: 'agent_research',
     author_name: 'Author',
     published_at: '2026-01-02',
+    research_area: 'Têxtil',
   },
   {
     id: '3',
@@ -34,6 +36,7 @@ const samplePosts: BlogPost[] = [
     source_type: 'manual',
     author_name: 'Author',
     published_at: '2026-01-03',
+    research_area: 'Agronomia',
   },
 ];
 
@@ -56,5 +59,23 @@ describe('filterBlogPostsByTitle', () => {
   it('does not match excerpt or other fields', () => {
     expect(filterBlogPostsByTitle(samplePosts, 'thc')).toEqual([]);
     expect(filterBlogPostsByTitle(samplePosts, 'Summary')).toEqual([]);
+  });
+});
+
+describe('filterBlogPostsByArea', () => {
+  it('returns all posts when no area is selected', () => {
+    expect(filterBlogPostsByArea(samplePosts, '')).toEqual(samplePosts);
+  });
+
+  it('filters posts by research_area', () => {
+    expect(filterBlogPostsByArea(samplePosts, 'Medicinal').map((p) => p.id)).toEqual(['1']);
+    expect(filterBlogPostsByArea(samplePosts, 'Agronomia').map((p) => p.id)).toEqual(['3']);
+  });
+});
+
+describe('filterBlogPosts', () => {
+  it('combines area and title filters', () => {
+    const results = filterBlogPosts(samplePosts, 'cannabis', 'Têxtil');
+    expect(results.map((p) => p.id)).toEqual(['2']);
   });
 });

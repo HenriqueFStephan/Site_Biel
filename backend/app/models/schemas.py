@@ -24,6 +24,16 @@ class ReviewStatus(str, Enum):
     REJECTED = "rejected"
 
 
+class ResearchArea(str, Enum):
+    """Área de atuação for scientific research posts (Ciência & Cannabis)."""
+
+    MEDICINAL = "Medicinal"
+    AGRONOMIA = "Agronomia"
+    CONSTRUCAO = "Construção"
+    TEXTIL = "Têxtil"
+    REGULATORIO = "Regulatório"
+
+
 class ContentSource(str, Enum):
     """Origin of a content item."""
 
@@ -74,6 +84,7 @@ class BlogPostBase(BaseModel):
     published_date: Optional[str] = None
     research_institution: Optional[str] = None
     research_country_code: Optional[str] = None
+    research_area: Optional[ResearchArea] = None
 
 
 class BlogPost(BlogPostBase):

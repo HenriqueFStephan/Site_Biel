@@ -15,6 +15,7 @@ from app.models.schemas import (
     ScientificPaperNormalized,
     ScientificPaperRaw,
 )
+from app.services.research_area import infer_research_area
 
 
 def _slugify(text: str, max_length: int = 80) -> str:
@@ -142,6 +143,12 @@ class ScientificPaperNormalizer:
 
         excerpt = paper.summary_pt or (paper.abstract[:280] + "…" if len(paper.abstract) > 280 else paper.abstract)
 
+        research_area = infer_research_area(
+            tags=paper.tags,
+            title=paper.title,
+            excerpt=excerpt,
+        )
+
         return BlogPostCreate(
             title=paper.title,
             title_pt=paper.title_pt,
@@ -153,6 +160,7 @@ class ScientificPaperNormalizer:
             cover_image_url=paper.hero_image_url,
             citation=paper.citation_block,
             published_date=paper.published_date,
+            research_area=research_area,
         )
 
     def _placeholder_summary(self, raw: ScientificPaperRaw) -> str:

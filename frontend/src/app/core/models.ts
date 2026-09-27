@@ -30,6 +30,8 @@ export interface BlogPost {
   published_date?: string;
   research_institution?: string;
   research_country_code?: string;
+  /** Área de atuação: Medicinal | Agronomia | Construção | Têxtil | Regulatório */
+  research_area?: string;
 }
 
 export interface Course {

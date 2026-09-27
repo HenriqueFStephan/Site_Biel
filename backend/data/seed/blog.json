@@ -25,7 +25,8 @@
     },
     "published_date": "2025-10-20",
     "research_institution": "Lincoln University - Missouri",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Agronomia"
   },
   {
     "id": "blog-research-20260907-02",
@@ -54,7 +55,8 @@
     },
     "published_date": "2025-06-23",
     "research_institution": "HOGENT University of Applied Sciences and Arts",
-    "research_country_code": "BE"
+    "research_country_code": "BE",
+    "research_area": "Agronomia"
   },
   {
     "id": "blog-research-20260907-03",
@@ -83,7 +85,8 @@
     },
     "published_date": "2025-05-14",
     "research_institution": "Phytoplant Research",
-    "research_country_code": "ES"
+    "research_country_code": "ES",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260907-04",
@@ -111,7 +114,8 @@
     },
     "published_date": "2025-10-01",
     "research_institution": "UNSW Sydney",
-    "research_country_code": "AU"
+    "research_country_code": "AU",
+    "research_area": "Construção"
   },
   {
     "id": "blog-research-20260907-05",
@@ -139,7 +143,8 @@
     },
     "published_date": "2026-05-29",
     "research_institution": "Warsaw University of Technology",
-    "research_country_code": "PL"
+    "research_country_code": "PL",
+    "research_area": "Construção"
   },
   {
     "id": "blog-research-20260907-06",
@@ -167,7 +172,8 @@
     },
     "published_date": "2025-12-01",
     "research_institution": "Medizinische Hochschule Hannover",
-    "research_country_code": "DE"
+    "research_country_code": "DE",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260907-07",
@@ -195,7 +201,8 @@
     },
     "published_date": "2026-08-31",
     "research_institution": "University of Southern Denmark",
-    "research_country_code": "DK"
+    "research_country_code": "DK",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260907-08",
@@ -223,7 +230,8 @@
     },
     "published_date": "2025-08-01",
     "research_institution": "The University of Queensland",
-    "research_country_code": "AU"
+    "research_country_code": "AU",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260907-09",
@@ -251,7 +259,8 @@
     },
     "published_date": "2025-02-01",
     "research_institution": "The University of Queensland",
-    "research_country_code": "AU"
+    "research_country_code": "AU",
+    "research_area": "Regulatório"
   },
   {
     "id": "blog-research-20260907-10",
@@ -279,7 +288,8 @@
     },
     "published_date": "2025-08-01",
     "research_institution": "UNSW Sydney",
-    "research_country_code": "AU"
+    "research_country_code": "AU",
+    "research_area": "Regulatório"
   },
   {
     "id": "blog-research-20260907-11",
@@ -307,7 +317,8 @@
     },
     "published_date": "2025-06-01",
     "research_institution": "West Virginia University",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Têxtil"
   },
   {
     "id": "blog-research-20260907-12",
@@ -335,7 +346,8 @@
     },
     "published_date": "2024-01-01",
     "research_institution": "Zhejiang Sci-Tech University",
-    "research_country_code": "CN"
+    "research_country_code": "CN",
+    "research_area": "Têxtil"
   },
   {
     "id": "blog-research-20260914-01",
@@ -363,7 +375,8 @@
     },
     "published_date": "2026-09-07",
     "research_institution": "Shenyang Medical College",
-    "research_country_code": "CN"
+    "research_country_code": "CN",
+    "research_area": "Agronomia"
   },
   {
     "id": "blog-research-20260914-02",
@@ -392,7 +405,8 @@
     },
     "published_date": "2026-09-03",
     "research_institution": "University of Hohenheim",
-    "research_country_code": "DE"
+    "research_country_code": "DE",
+    "research_area": "Agronomia"
   },
   {
     "id": "blog-research-20260914-03",
@@ -420,7 +434,8 @@
     },
     "published_date": "2026-08-14",
     "research_institution": "North Carolina Agricultural and Technical State University",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Agronomia"
   },
   {
     "id": "blog-research-20260914-04",
@@ -448,7 +463,8 @@
     },
     "published_date": "2026-09-08",
     "research_institution": "Chouaib Doukkali University",
-    "research_country_code": "MA"
+    "research_country_code": "MA",
+    "research_area": "Construção"
   },
   {
     "id": "blog-research-20260914-05",
@@ -476,7 +492,8 @@
     },
     "published_date": "2026-09-06",
     "research_institution": "Rzeszów University of Technology",
-    "research_country_code": "PL"
+    "research_country_code": "PL",
+    "research_area": "Construção"
   },
   {
     "id": "blog-research-20260914-06",
@@ -504,7 +521,8 @@
     },
     "published_date": "2026-08-22",
     "research_institution": "Washington State University",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260914-07",
@@ -532,7 +550,8 @@
     },
     "published_date": "2026-09-12",
     "research_institution": "Incannex Healthcare Inc. (Australia)",
-    "research_country_code": "AU"
+    "research_country_code": "AU",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260914-08",
@@ -560,7 +579,8 @@
     },
     "published_date": "2026-08-25",
     "research_institution": "Impact",
-    "research_country_code": "CA"
+    "research_country_code": "CA",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260914-09",
@@ -588,7 +608,8 @@
     },
     "published_date": "2026-09-08",
     "research_institution": "University of the Pacific",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260914-10",
@@ -616,7 +637,8 @@
     },
     "published_date": "2026-08-20",
     "research_institution": "University of Regina",
-    "research_country_code": "CA"
+    "research_country_code": "CA",
+    "research_area": "Regulatório"
   },
   {
     "id": "blog-research-20260914-11",
@@ -644,7 +666,8 @@
     },
     "published_date": "2026-08-25",
     "research_institution": "Cukurova University",
-    "research_country_code": "TR"
+    "research_country_code": "TR",
+    "research_area": "Têxtil"
   },
   {
     "id": "blog-research-20260914-12",
@@ -672,7 +695,8 @@
     },
     "published_date": "2026-08-14",
     "research_institution": "Universidade de Santiago de Compostela",
-    "research_country_code": "ES"
+    "research_country_code": "ES",
+    "research_area": "Têxtil"
   },
   {
     "id": "blog-research-20260921-01",
@@ -700,7 +724,8 @@
     },
     "published_date": "2026-09-14",
     "research_institution": "Lovely Professional University",
-    "research_country_code": "IN"
+    "research_country_code": "IN",
+    "research_area": "Agronomia"
   },
   {
     "id": "blog-research-20260921-02",
@@ -728,7 +753,8 @@
     },
     "published_date": "2026-09-18",
     "research_institution": "Institute for Complex Systems",
-    "research_country_code": "IT"
+    "research_country_code": "IT",
+    "research_area": "Agronomia"
   },
   {
     "id": "blog-research-20260921-03",
@@ -756,7 +782,8 @@
     },
     "published_date": "2026-09-17",
     "research_institution": "Manipal Academy of Higher Education",
-    "research_country_code": "IN"
+    "research_country_code": "IN",
+    "research_area": "Construção"
   },
   {
     "id": "blog-research-20260921-04",
@@ -784,7 +811,8 @@
     },
     "published_date": "2026-08-27",
     "research_institution": "Lublin University of Technology",
-    "research_country_code": "PL"
+    "research_country_code": "PL",
+    "research_area": "Têxtil"
   },
   {
     "id": "blog-research-20260921-05",
@@ -812,7 +840,8 @@
     },
     "published_date": "2026-08-31",
     "research_institution": "Centre for Addiction and Mental Health",
-    "research_country_code": "CA"
+    "research_country_code": "CA",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260921-06",
@@ -840,7 +869,8 @@
     },
     "published_date": "2026-09-08",
     "research_institution": "Oregon State University",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260921-07",
@@ -868,7 +898,8 @@
     },
     "published_date": "2026-09-14",
     "research_institution": "Chungnam National University",
-    "research_country_code": "KR"
+    "research_country_code": "KR",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260921-08",
@@ -896,7 +927,8 @@
     },
     "published_date": "2026-08-28",
     "research_institution": "University of Colorado Boulder",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Regulatório"
   },
   {
     "id": "blog-research-20260921-09",
@@ -924,7 +956,8 @@
     },
     "published_date": "2026-08-23",
     "research_institution": "North Carolina State University",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Têxtil"
   },
   {
     "id": "blog-research-20260921-10",
@@ -952,7 +985,8 @@
     },
     "published_date": "2026-09-07",
     "research_institution": "Deakin University",
-    "research_country_code": "AU"
+    "research_country_code": "AU",
+    "research_area": "Têxtil"
   },
   {
     "id": "blog-research-20260927-01",
@@ -980,7 +1014,8 @@
     },
     "published_date": "2024-04-16",
     "research_institution": "Cornell University / Cornell AgriTech",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Agronomia"
   },
   {
     "id": "blog-research-20260927-02",
@@ -1008,7 +1043,8 @@
     },
     "published_date": "2024-04-22",
     "research_institution": "Université Laval",
-    "research_country_code": "CA"
+    "research_country_code": "CA",
+    "research_area": "Agronomia"
   },
   {
     "id": "blog-research-20260927-03",
@@ -1036,7 +1072,8 @@
     },
     "published_date": "2024-02-19",
     "research_institution": "University of Florida",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Agronomia"
   },
   {
     "id": "blog-research-20260927-04",
@@ -1065,7 +1102,8 @@
     },
     "published_date": "2024-12-30",
     "research_institution": "University of Hohenheim, Institute of Crop Science",
-    "research_country_code": "DE"
+    "research_country_code": "DE",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260927-05",
@@ -1093,7 +1131,8 @@
     },
     "published_date": "2024-02-28",
     "research_institution": "UCSF",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260927-06",
@@ -1121,7 +1160,8 @@
     },
     "published_date": "2024-09-18",
     "research_institution": "MIT McGovern Institute",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260927-07",
@@ -1149,7 +1189,8 @@
     },
     "published_date": "2024-07-22",
     "research_institution": "Kaiser Permanente Northern California",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260927-08",
@@ -1177,7 +1218,8 @@
     },
     "published_date": "2024-10-28",
     "research_institution": "Nationwide Children's Hospital",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260927-09",
@@ -1205,7 +1247,8 @@
     },
     "published_date": "2024-05-22",
     "research_institution": "University of Toronto",
-    "research_country_code": "CA"
+    "research_country_code": "CA",
+    "research_area": "Medicinal"
   },
   {
     "id": "blog-research-20260927-10",
@@ -1233,7 +1276,8 @@
     },
     "published_date": "2024-01-19",
     "research_institution": "Weill Cornell Medicine",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Regulatório"
   },
   {
     "id": "blog-research-20260927-11",
@@ -1261,7 +1305,8 @@
     },
     "published_date": "2024-04-24",
     "research_institution": "Montana State University",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Regulatório"
   },
   {
     "id": "blog-research-20260927-12",
@@ -1289,7 +1334,8 @@
     },
     "published_date": "2024-03-27",
     "research_institution": "Johns Hopkins University School of Medicine",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Regulatório"
   },
   {
     "id": "blog-research-20260927-13",
@@ -1317,7 +1363,8 @@
     },
     "published_date": "2024-10-10",
     "research_institution": "North Carolina State University, Wilson College of Textiles",
-    "research_country_code": "US"
+    "research_country_code": "US",
+    "research_area": "Têxtil"
   },
   {
     "id": "blog-research-20260927-14",
@@ -1345,7 +1392,8 @@
     },
     "published_date": "2024-09-07",
     "research_institution": "University of Leeds — School of Chemistry and Leeds Institute of Textiles and Colour",
-    "research_country_code": "GB"
+    "research_country_code": "GB",
+    "research_area": "Têxtil"
   },
   {
     "id": "blog-research-20260927-15",
@@ -1373,6 +1421,7 @@
     },
     "published_date": "2024-08-01",
     "research_institution": "IMT Mines Alès",
-    "research_country_code": "FR"
+    "research_country_code": "FR",
+    "research_area": "Têxtil"
   }
 ]

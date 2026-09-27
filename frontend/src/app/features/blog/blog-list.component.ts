@@ -6,7 +6,8 @@ import { Subject, takeUntil } from 'rxjs';
 import { ApiService } from '../../core/api.service';
 import { I18nService, TranslatePipe } from '../../core/i18n';
 import { BlogPost } from '../../core/models';
-import { filterBlogPostsByTitle } from './blog-list.filter';
+import { filterBlogPosts } from './blog-list.filter';
+import { RESEARCH_AREAS, ResearchArea } from './research-area';
 import { researchSourceLabel } from './research-source-label';
 
 @Component({
@@ -21,17 +22,32 @@ import { researchSourceLabel } from './research-source-label';
             <h1>{{ 'blog.title' | t }}</h1>
             <p>{{ 'blog.lead' | t }}</p>
           </div>
-          <div class="blog-page-header__search">
-            <input
-              id="blog-search"
-              type="search"
-              class="blog-search"
-              [value]="searchQuery"
-              (input)="onSearchInput($event)"
-              [placeholder]="'blog.searchPlaceholder' | t"
-              [attr.aria-label]="'blog.searchLabel' | t"
-              autocomplete="off"
-            />
+          <div class="blog-page-header__toolbar">
+            <div class="blog-page-header__area">
+              <label class="visually-hidden" for="blog-area-filter">{{ 'blog.areaFilterLabel' | t }}</label>
+              <select
+                id="blog-area-filter"
+                class="blog-area-filter"
+                [value]="selectedArea"
+                (change)="onAreaChange($event)"
+                [attr.aria-label]="'blog.areaFilterLabel' | t"
+              >
+                <option value="">{{ 'blog.areaFilterAll' | t }}</option>
+                <option *ngFor="let area of researchAreas" [value]="area">{{ area }}</option>
+              </select>
+            </div>
+            <div class="blog-page-header__search">
+              <input
+                id="blog-search"
+                type="search"
+                class="blog-search"
+                [value]="searchQuery"
+                (input)="onSearchInput($event)"
+                [placeholder]="'blog.searchPlaceholder' | t"
+                [attr.aria-label]="'blog.searchLabel' | t"
+                autocomplete="off"
+              />
+            </div>
           </div>
         </header>
 
@@ -62,8 +78,10 @@ import { researchSourceLabel } from './research-source-label';
   styleUrls: ['./blog-list.component.scss'],
 })
 export class BlogListComponent implements OnInit, OnDestroy {
+  readonly researchAreas = RESEARCH_AREAS;
   posts: BlogPost[] = [];
   searchQuery = '';
+  selectedArea: ResearchArea | '' = '';
   loading = true;
   error: '' | 'blog.error' = '';
   private readonly destroy$ = new Subject<void>();
@@ -74,7 +92,7 @@ export class BlogListComponent implements OnInit, OnDestroy {
   ) {}
 
   get filteredPosts(): BlogPost[] {
-    return filterBlogPostsByTitle(this.posts, this.searchQuery);
+    return filterBlogPosts(this.posts, this.searchQuery, this.selectedArea);
   }
 
   ngOnInit(): void {
@@ -89,6 +107,10 @@ export class BlogListComponent implements OnInit, OnDestroy {
 
   onSearchInput(event: Event): void {
     this.searchQuery = (event.target as HTMLInputElement).value;
+  }
+
+  onAreaChange(event: Event): void {
+    this.selectedArea = (event.target as HTMLSelectElement).value as ResearchArea | '';
   }
 
   researchLabel(post: BlogPost): string | null {

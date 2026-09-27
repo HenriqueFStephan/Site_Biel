@@ -19,6 +19,7 @@ const mockPosts: BlogPost[] = [
     published_at: '2026-01-01',
     research_institution: 'Lincoln University - Missouri',
     research_country_code: 'US',
+    research_area: 'Medicinal',
   },
   {
     id: '2',
@@ -30,6 +31,7 @@ const mockPosts: BlogPost[] = [
     source_type: 'manual',
     author_name: 'Author',
     published_at: '2026-01-02',
+    research_area: 'Agronomia',
   },
 ];
 
@@ -51,14 +53,38 @@ describe('BlogListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('renders the search field to the right of the section description', () => {
+  it('renders the area filter to the left of the keyword search', () => {
     const header = fixture.nativeElement.querySelector('.blog-page-header');
     const intro = header?.querySelector('.blog-page-header__intro');
-    const search = header?.querySelector('.blog-page-header__search input');
+    const toolbar = header?.querySelector('.blog-page-header__toolbar');
+    const area = toolbar?.querySelector('#blog-area-filter');
+    const search = toolbar?.querySelector('#blog-search');
 
     expect(header).toBeTruthy();
     expect(intro?.querySelector('h1')?.textContent?.trim()).toBe('Ciência & Cannabis');
+    expect(area?.tagName).toBe('SELECT');
     expect(search?.getAttribute('type')).toBe('search');
+    expect(
+      Array.from(toolbar?.children ?? []).indexOf(area?.parentElement as Element),
+    ).toBeLessThan(Array.from(toolbar?.children ?? []).indexOf(search?.parentElement as Element));
+  });
+
+  it('lists the five research areas on the filter control', () => {
+    const select: HTMLSelectElement = fixture.nativeElement.querySelector('#blog-area-filter');
+    const labels = Array.from(select.options).slice(1).map((o) => o.textContent?.trim());
+    expect(labels).toEqual(['Medicinal', 'Agronomia', 'Construção', 'Têxtil', 'Regulatório']);
+  });
+
+  it('filters posts by selected area', () => {
+    const select: HTMLSelectElement = fixture.nativeElement.querySelector('#blog-area-filter');
+    select.value = 'Medicinal';
+    select.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelectorAll('.news-row').length).toBe(1);
+    expect(fixture.nativeElement.querySelector('.col-title')?.textContent?.trim()).toBe(
+      'CBD clinical trial results',
+    );
   });
 
   it('filters posts by title in real time', () => {

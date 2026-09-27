@@ -64,6 +64,8 @@ export const ptBR = {
   'blog.detailLoading': 'Carregando…',
   'blog.searchLabel': 'Buscar artigos por título',
   'blog.searchPlaceholder': 'Buscar por palavra-chave…',
+  'blog.areaFilterLabel': 'Filtrar pesquisas por área de atuação',
+  'blog.areaFilterAll': 'Todas as áreas',
   'blog.noResults': 'Nenhum artigo encontrado para a busca.',
 
   'courses.title': 'Cursos',
@@ -200,6 +202,8 @@ export const en: Record<MsgKey, string> = {
   'blog.detailLoading': 'Loading…',
   'blog.searchLabel': 'Search articles by title',
   'blog.searchPlaceholder': 'Search by keyword…',
+  'blog.areaFilterLabel': 'Filter research by area',
+  'blog.areaFilterAll': 'All areas',
   'blog.noResults': 'No articles found for your search.',
 
   'courses.title': 'Courses',
