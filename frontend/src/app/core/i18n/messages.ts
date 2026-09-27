@@ -78,7 +78,7 @@ export const ptBR = {
 
   'services.title': 'Consultoria Técnica e Estratégica em Cannabis Medicinal',
   'services.lead':
-    'Visão integrada de toda a cadeia produtiva — da concepção e implantação da unidade ao cultivo, processamento e operação comercial.',
+    'Estratégia do início à operação: conectamos projeto, infraestrutura, cultivo, processamento e gestão para transformar investimentos em operações produtivas estruturadas, eficientes e preparadas para o mercado.',
   'services.loading': 'Carregando serviços…',
   'services.error': 'Não foi possível carregar os serviços.',
   'services.ctaTitle': 'Pronto para estruturar seu projeto?',
