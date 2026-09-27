@@ -14,8 +14,38 @@ const mockServices: ServiceOffering[] = [
   {
     id: 'svc-viability',
     title: 'Viabilidade & Investimentos',
-    description: 'CAPEX • OPEX',
+    description: 'CAPEX • OPEX • Viabilidade • Benchmarking • Cenários de Escala',
     icon: 'chart',
+    highlights: [],
+  },
+  {
+    id: 'svc-engineering',
+    title: 'Engenharia & Desenvolvimento',
+    description:
+      'Master Planning • Engenharia Conceitual • Layout • Pré-dimensionamento • Sistemas',
+    icon: 'blueprint',
+    highlights: [],
+  },
+  {
+    id: 'svc-cultivation',
+    title: 'Cultivo & Operações',
+    description: 'CEA • Cultivo • Crop Steering • Fertirrigação • IPM • Pós-colheita • SOPs',
+    icon: 'plant',
+    highlights: [],
+  },
+  {
+    id: 'svc-regulatory',
+    title: 'Regulatório & Qualidade',
+    description:
+      'Compliance • GACP/GMP • Boas Práticas • Gap Analysis • Qualidade • Documentação',
+    icon: 'shield',
+    highlights: [],
+  },
+  {
+    id: 'svc-implementation',
+    title: 'Implantação & Performance',
+    description: 'Fornecedores • Compras Técnicas • Comissionamento • Treinamento • Otimização',
+    icon: 'cycle',
     highlights: [],
   },
 ];
@@ -64,15 +94,35 @@ describe('ServicesComponent', () => {
     expect(parseFloat(getComputedStyle(topics).fontSize)).toBe(18);
   });
 
-  it('renders an orange premium description box beside each service', () => {
+  it('renders service topics as a two-column list without bullet separators', () => {
     const row = fixture.nativeElement.querySelector('.service-row');
     const premium = row?.querySelector('.service-premium');
     const topics = row?.querySelector('.service-row__topics');
+    const topicItems = topics?.querySelectorAll('li');
 
     expect(row).toBeTruthy();
     expect(premium).toBeTruthy();
-    expect(topics?.textContent).toContain('CAPEX');
+    expect(topics?.tagName).toBe('UL');
+    expect(topicItems?.length).toBe(5);
+    expect(topics?.textContent).not.toContain('•');
+    expect(topicItems?.[0]?.textContent).toContain('CAPEX');
+    expect(topicItems?.[4]?.textContent).toContain('Cenários de Escala');
     expect(premium?.textContent).toContain('Transformamos oportunidades');
+  });
+
+  it('parses bullet-separated descriptions for all five consulting services', () => {
+    const expectedCounts = [5, 5, 7, 6, 5];
+    for (let i = 0; i < mockServices.length; i++) {
+      const topics = component.serviceTopics(mockServices[i].description);
+      expect(topics.length).withContext(mockServices[i].id).toBe(expectedCounts[i]);
+      expect(topics.join(' ')).not.toContain('•');
+    }
+  });
+
+  it('uses a responsive two-column grid for service topic lists', () => {
+    const scss = readFileSync(join(__dirname, 'services.component.scss'), 'utf8');
+    expect(scss).toMatch(/\.service-row__topics[\s\S]*grid-template-columns: 1fr 1fr/);
+    expect(scss).toMatch(/grid-template-columns: 1fr;/);
   });
 
   it('maps premium copy keys for all five consulting services', () => {

@@ -26,7 +26,9 @@ import { ServiceOffering } from '../../core/models';
           <li *ngFor="let svc of services" class="service-row">
             <div class="service-row__main">
               <h3>{{ displayTitle(svc.title) }}</h3>
-              <p class="service-row__topics">{{ svc.description }}</p>
+              <ul class="service-row__topics">
+                <li *ngFor="let topic of serviceTopics(svc.description)">{{ topic }}</li>
+              </ul>
               <ul class="highlights" *ngIf="svc.highlights.length">
                 <li *ngFor="let h of svc.highlights">{{ h }}</li>
               </ul>
@@ -171,6 +173,14 @@ export class ServicesComponent implements OnInit, OnDestroy {
   /** CSS already numbers .feature-list rows; drop the same index from API titles. */
   displayTitle(title: string): string {
     return title.replace(/^\s*\d+\s*[—–−-]\s*/, '').trim();
+  }
+
+  /** Ordered topic labels from the API description (items separated by •). */
+  serviceTopics(description: string): string[] {
+    return description
+      .split(/\s*•\s*/)
+      .map((item) => item.trim())
+      .filter(Boolean);
   }
 
   hasPremiumCopy(serviceId: string): boolean {
