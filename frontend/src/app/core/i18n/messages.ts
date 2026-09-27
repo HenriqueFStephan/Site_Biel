@@ -84,9 +84,9 @@ export const ptBR = {
   'services.ctaTitle': 'Pronto para estruturar seu projeto?',
   'services.ctaLead':
     'Agende uma conversa para mapear instalação, climatização, cultivo e compliance.',
-  'services.ctaButton': 'Solicitar consultoria',
+  'services.ctaButton': 'Diagnóstico Gratuito',
   'services.closeAria': 'Fechar',
-  'services.formTitle': 'Solicitar consultoria',
+  'services.formTitle': 'Diagnóstico Gratuito',
   'services.formLead': 'Confirme os dados abaixo para enviar a solicitação à equipe.',
   'services.name': 'Nome',
   'services.email': 'E-mail',
