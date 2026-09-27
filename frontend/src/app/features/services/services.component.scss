@@ -1,5 +1,9 @@
 @import '../../../styles/variables';
 
+$service-premium-track-min: 15rem;
+$service-premium-track-max: 22rem;
+$service-premium-track-scale: 1.75;
+
 :host .feature-list > li.service-row {
   grid-template-columns: 3rem minmax(0, 1fr);
 
@@ -39,12 +43,16 @@
   }
 
   @media (min-width: 992px) {
-    grid-template-columns: 3rem minmax(0, 1fr) minmax(15rem, 22rem);
+    grid-template-columns: 3rem minmax(0, 1fr) minmax(
+      $service-premium-track-min * $service-premium-track-scale,
+      $service-premium-track-max * $service-premium-track-scale
+    );
     align-items: start;
 
     .service-premium {
       grid-column: 3;
       margin-top: 0;
+      max-width: 100%;
     }
   }
 }

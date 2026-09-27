@@ -1,3 +1,6 @@
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of, throwError } from 'rxjs';
 import { provideRouter } from '@angular/router';
@@ -41,6 +44,12 @@ describe('ServicesComponent', () => {
     fixture = TestBed.createComponent(ServicesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+  });
+
+  it('uses a 175% desktop grid track for premium description boxes', () => {
+    const scss = readFileSync(join(__dirname, 'services.component.scss'), 'utf8');
+    expect(scss).toContain('$service-premium-track-scale: 1.75');
+    expect(scss).toMatch(/\$service-premium-track-max \* \$service-premium-track-scale/);
   });
 
   it('renders an orange premium description box beside each service', () => {
