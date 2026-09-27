@@ -7,6 +7,7 @@ import { ApiService } from '../../core/api.service';
 import { I18nService, TranslatePipe } from '../../core/i18n';
 import { BlogPost } from '../../core/models';
 import { filterBlogPostsByTitle } from './blog-list.filter';
+import { researchSourceLabel } from './research-source-label';
 
 @Component({
   selector: 'app-blog-list',
@@ -41,7 +42,7 @@ import { filterBlogPostsByTitle } from './blog-list.filter';
           <a class="news-row" *ngFor="let post of filteredPosts" [routerLink]="['/blog', post.slug]">
             <span class="col-date" *ngIf="displayDate(post) as date">{{ date | date:'d MMM y':undefined:i18n.dateLocale() }}</span>
             <span class="col-tag">
-              <span class="tag" *ngIf="post.source_type === 'agent_research'">{{ 'blog.researchTag' | t }}</span>
+              <span class="tag" *ngIf="researchLabel(post) as label">{{ label }}</span>
             </span>
             <span class="col-title">{{ post.title }}</span>
             <span class="col-arrow">→</span>
@@ -88,6 +89,10 @@ export class BlogListComponent implements OnInit, OnDestroy {
 
   onSearchInput(event: Event): void {
     this.searchQuery = (event.target as HTMLInputElement).value;
+  }
+
+  researchLabel(post: BlogPost): string | null {
+    return researchSourceLabel(post, this.i18n.lang());
   }
 
   displayDate(post: BlogPost): string | null {

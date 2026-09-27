@@ -6,6 +6,7 @@ import { Subject, takeUntil } from 'rxjs';
 import { ApiService } from '../../core/api.service';
 import { I18nService, TranslatePipe } from '../../core/i18n';
 import { BlogPost } from '../../core/models';
+import { researchSourceLabel } from './research-source-label';
 
 @Component({
   selector: 'app-blog-detail',
@@ -16,7 +17,7 @@ import { BlogPost } from '../../core/models';
       <article class="container article">
         <a routerLink="/blog" class="back">{{ 'blog.back' | t }}</a>
         <header>
-          <span class="tag" *ngIf="post.source_type === 'agent_research'">{{ 'blog.researchTag' | t }}</span>
+          <span class="tag" *ngIf="researchLabel(post) as label">{{ label }}</span>
           <h1>{{ post.title }}</h1>
           <p class="article__meta">
             {{ post.author_name }}<ng-container *ngIf="displayDate(post) as date"> · {{ date | date:'longDate':undefined:i18n.dateLocale() }}</ng-container>
@@ -51,6 +52,10 @@ export class BlogDetailComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
+  }
+
+  researchLabel(post: BlogPost): string | null {
+    return researchSourceLabel(post, this.i18n.lang());
   }
 
   displayDate(post: BlogPost): string | null {

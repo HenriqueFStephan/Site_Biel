@@ -155,6 +155,32 @@ def test_issue28_research_posts_are_published():
         assert "## Por que importa" in row.get("content_markdown", "")
 
 
+def test_research_posts_expose_institution_metadata():
+    from app.repositories.json_store import blog_store
+
+    research_rows = [
+        row for row in blog_store.read_all() if row.get("source_type") == "agent_research"
+    ]
+    assert research_rows
+    for row in research_rows:
+        assert row.get("research_institution"), row["id"]
+        assert row.get("research_country_code"), row["id"]
+
+
+def test_list_blog_includes_research_institution_fields():
+    from fastapi.testclient import TestClient
+
+    from app.main import app
+
+    api = TestClient(app)
+    response = api.get("/api/v1/blog")
+    assert response.status_code == 200
+    research = [row for row in response.json() if row.get("source_type") == "agent_research"]
+    assert research
+    assert research[0].get("research_institution")
+    assert research[0].get("research_country_code")
+
+
 def test_to_blog_post_carries_published_date():
     from app.models.schemas import ScientificPaperRaw
     from app.services.paper_normalizer import ScientificPaperNormalizer

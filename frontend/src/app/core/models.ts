@@ -28,6 +28,8 @@ export interface BlogPost {
   author_name: string;
   published_at: string;
   published_date?: string;
+  research_institution?: string;
+  research_country_code?: string;
 }
 
 export interface Course {

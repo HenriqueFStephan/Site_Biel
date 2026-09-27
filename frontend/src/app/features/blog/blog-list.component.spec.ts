@@ -17,6 +17,8 @@ const mockPosts: BlogPost[] = [
     source_type: 'agent_research',
     author_name: 'Author',
     published_at: '2026-01-01',
+    research_institution: 'Lincoln University - Missouri',
+    research_country_code: 'US',
   },
   {
     id: '2',
@@ -83,6 +85,11 @@ describe('BlogListComponent', () => {
     fixture.detectChanges();
 
     expect(fixture.nativeElement.querySelectorAll('.news-row').length).toBe(2);
+  });
+
+  it('shows institution and country instead of the generic research tag', () => {
+    const tag = fixture.nativeElement.querySelector('.news-row .tag');
+    expect(tag?.textContent?.trim()).toBe('Lincoln University - Missouri (Estados Unidos)');
   });
 
   it('shows an empty-state message when no title matches', () => {

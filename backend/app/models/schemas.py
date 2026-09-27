@@ -72,6 +72,8 @@ class BlogPostBase(BaseModel):
     instagram_url: Optional[str] = None
     citation: Optional[str] = None
     published_date: Optional[str] = None
+    research_institution: Optional[str] = None
+    research_country_code: Optional[str] = None
 
 
 class BlogPost(BlogPostBase):
