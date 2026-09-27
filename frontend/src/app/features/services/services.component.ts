@@ -23,14 +23,20 @@ import { ServiceOffering } from '../../core/models';
         <div *ngIf="error" class="error-state">{{ error | t }}</div>
 
         <ul class="feature-list" *ngIf="!loading && !error">
-          <li *ngFor="let svc of services">
-            <div>
+          <li *ngFor="let svc of services" class="service-row">
+            <div class="service-row__main">
               <h3>{{ displayTitle(svc.title) }}</h3>
-              <p>{{ svc.description }}</p>
+              <p class="service-row__topics">{{ svc.description }}</p>
               <ul class="highlights" *ngIf="svc.highlights.length">
                 <li *ngFor="let h of svc.highlights">{{ h }}</li>
               </ul>
             </div>
+            <aside *ngIf="hasPremiumCopy(svc.id)" class="service-premium" [attr.aria-label]="displayTitle(svc.title)">
+              <p>
+                <strong>{{ premiumHeadlineKey(svc.id) | t }}</strong>
+                {{ premiumBodyKey(svc.id) | t }}
+              </p>
+            </aside>
           </li>
         </ul>
       </div>
@@ -166,6 +172,41 @@ export class ServicesComponent implements OnInit, OnDestroy {
   displayTitle(title: string): string {
     return title.replace(/^\s*\d+\s*[—–−-]\s*/, '').trim();
   }
+
+  hasPremiumCopy(serviceId: string): boolean {
+    return serviceId in ServicesComponent.premiumServiceIds;
+  }
+
+  premiumHeadlineKey(serviceId: string): string {
+    return ServicesComponent.premiumServiceIds[serviceId].headline;
+  }
+
+  premiumBodyKey(serviceId: string): string {
+    return ServicesComponent.premiumServiceIds[serviceId].body;
+  }
+
+  private static readonly premiumServiceIds: Record<string, { headline: string; body: string }> = {
+    'svc-viability': {
+      headline: 'services.premium.svc-viability.headline',
+      body: 'services.premium.svc-viability.body',
+    },
+    'svc-engineering': {
+      headline: 'services.premium.svc-engineering.headline',
+      body: 'services.premium.svc-engineering.body',
+    },
+    'svc-cultivation': {
+      headline: 'services.premium.svc-cultivation.headline',
+      body: 'services.premium.svc-cultivation.body',
+    },
+    'svc-regulatory': {
+      headline: 'services.premium.svc-regulatory.headline',
+      body: 'services.premium.svc-regulatory.body',
+    },
+    'svc-implementation': {
+      headline: 'services.premium.svc-implementation.headline',
+      body: 'services.premium.svc-implementation.body',
+    },
+  };
 
   isSelected(id: string): boolean {
     return this.selectedServiceIds.includes(id);

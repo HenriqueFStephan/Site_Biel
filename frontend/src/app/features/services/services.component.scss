@@ -1,5 +1,54 @@
 @import '../../../styles/variables';
 
+:host .feature-list > li.service-row {
+  grid-template-columns: 3rem minmax(0, 1fr);
+
+  .service-row__main {
+    min-width: 0;
+  }
+
+  .service-row__topics {
+    margin: 0;
+    font-size: 0.875rem;
+    color: $color-text-muted;
+  }
+
+  .service-premium {
+    grid-column: 2;
+    margin-top: 1rem;
+    padding: 1rem 1.15rem;
+    border-radius: $radius-md;
+    background: rgba($color-accent, 0.24);
+    border: 1px solid rgba($color-accent, 0.62);
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: $color-text;
+
+    p {
+      margin: 0;
+      max-width: none;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 0.45rem;
+      font-weight: 600;
+      color: $color-earth;
+      line-height: 1.4;
+    }
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: 3rem minmax(0, 1fr) minmax(15rem, 22rem);
+    align-items: start;
+
+    .service-premium {
+      grid-column: 3;
+      margin-top: 0;
+    }
+  }
+}
+
 .highlights {
   margin: 0.75rem 0 0;
   padding-left: 1.1rem;
