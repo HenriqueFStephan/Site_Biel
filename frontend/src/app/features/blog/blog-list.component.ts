@@ -54,7 +54,7 @@ import { researchSourceLabel } from './research-source-label';
         <div *ngIf="loading" class="loading">{{ 'blog.loading' | t }}</div>
         <div *ngIf="error" class="error-state">{{ error | t }}</div>
 
-        <div class="news-rows" *ngIf="!loading && !error && filteredPosts.length">
+        <div class="news-rows blog-news-rows" *ngIf="!loading && !error && filteredPosts.length">
           <a class="news-row" *ngFor="let post of filteredPosts" [routerLink]="['/blog', post.slug]">
             <span class="col-date" *ngIf="displayDate(post) as date">{{ date | date:'d MMM y':undefined:i18n.dateLocale() }}</span>
             <span class="col-tag">

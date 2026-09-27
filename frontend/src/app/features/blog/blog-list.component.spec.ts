@@ -118,6 +118,12 @@ describe('BlogListComponent', () => {
     expect(tag?.textContent?.trim()).toBe('Lincoln University - Missouri (Estados Unidos)');
   });
 
+  it('widens the institution column on Ciência & Cannabis rows', () => {
+    const row: HTMLElement | null = fixture.nativeElement.querySelector('.blog-news-rows .news-row');
+    expect(row).toBeTruthy();
+    expect(getComputedStyle(row!).gridTemplateColumns).toBe('120px 156px 1fr 24px');
+  });
+
   it('shows an empty-state message when no title matches', () => {
     const input: HTMLInputElement = fixture.nativeElement.querySelector('#blog-search');
     input.value = 'inexistente';
