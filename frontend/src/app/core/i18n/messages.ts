@@ -102,6 +102,26 @@ export const ptBR = {
   'services.successNoEmail': 'Solicitação registrada. Retornaremos em breve.',
   'services.errorSubmit': 'Erro ao enviar. Tente novamente ou verifique o backend.',
 
+  'services.premium.svc-viability.headline':
+    'Transformamos oportunidades em decisões de investimento fundamentadas.',
+  'services.premium.svc-viability.body':
+    'Estruturamos análises de CAPEX, OPEX, viabilidade econômica, benchmarking e cenários de escala para avaliar diferentes modelos de negócio, dimensionar investimentos e apoiar decisões estratégicas com maior segurança.',
+  'services.premium.svc-engineering.headline': 'Do conceito à estrutura física da operação.',
+  'services.premium.svc-engineering.body':
+    'Desenvolvemos o planejamento técnico da unidade, integrando master planning, engenharia conceitual, layout, pré-dimensionamento e sistemas para criar uma infraestrutura coerente com os objetivos produtivos, regulatórios e comerciais do projeto.',
+  'services.premium.svc-cultivation.headline':
+    'Estruturamos operações produtivas orientadas à qualidade, eficiência e consistência.',
+  'services.premium.svc-cultivation.body':
+    'Integramos tecnologias de cultivo em ambiente controlado, manejo agronômico, crop steering, fertirrigação, manejo integrado de pragas, pós-colheita e SOPs para transformar conhecimento técnico em processos operacionais replicáveis.',
+  'services.premium.svc-regulatory.headline':
+    'Conectamos operação, conformidade e qualidade desde o início do projeto.',
+  'services.premium.svc-regulatory.body':
+    'Estruturamos requisitos regulatórios e sistemas de qualidade, apoiando a implementação de GACP/GMP, boas práticas, gap analysis, documentação e controles necessários para operações organizadas, rastreáveis e preparadas para auditorias e fiscalização.',
+  'services.premium.svc-implementation.headline':
+    'Levamos o planejamento à execução e a operação à melhoria contínua.',
+  'services.premium.svc-implementation.body':
+    'Apoiamos a seleção e qualificação de fornecedores, compras técnicas, comissionamento, treinamento de equipes e otimização operacional, garantindo maior alinhamento entre projeto, implantação e performance da unidade.',
+
   'contact.title': 'Contato',
   'contact.lead': 'Consultoria, parcerias ou dúvidas sobre o hub — envie sua mensagem.',
   'contact.name': 'Nome',
@@ -239,6 +259,26 @@ export const en: Record<MsgKey, string> = {
   'services.success': 'Request sent. We will get back to you soon.',
   'services.successNoEmail': 'Request recorded. We will get back to you soon.',
   'services.errorSubmit': 'Could not send. Try again or check that the backend is running.',
+
+  'services.premium.svc-viability.headline':
+    'We turn opportunities into well-founded investment decisions.',
+  'services.premium.svc-viability.body':
+    'We structure CAPEX and OPEX analyses, economic viability, benchmarking and scale scenarios to evaluate business models, size investments and support strategic decisions with greater confidence.',
+  'services.premium.svc-engineering.headline': 'From concept to the physical structure of the operation.',
+  'services.premium.svc-engineering.body':
+    'We develop the unit’s technical planning, integrating master planning, conceptual engineering, layout, pre-sizing and systems to create infrastructure aligned with the project’s production, regulatory and commercial goals.',
+  'services.premium.svc-cultivation.headline':
+    'We structure production operations focused on quality, efficiency and consistency.',
+  'services.premium.svc-cultivation.body':
+    'We integrate controlled-environment cultivation technologies, agronomic management, crop steering, fertigation, integrated pest management, post-harvest and SOPs to turn technical knowledge into repeatable operational processes.',
+  'services.premium.svc-regulatory.headline':
+    'We connect operations, compliance and quality from the start of the project.',
+  'services.premium.svc-regulatory.body':
+    'We structure regulatory requirements and quality systems, supporting GACP/GMP implementation, good practices, gap analysis, documentation and controls needed for organized, traceable operations ready for audits and inspections.',
+  'services.premium.svc-implementation.headline':
+    'We take planning into execution and operations into continuous improvement.',
+  'services.premium.svc-implementation.body':
+    'We support supplier selection and qualification, technical purchasing, commissioning, team training and operational optimization, ensuring stronger alignment between project design, deployment and unit performance.',
 
   'contact.title': 'Contact',
   'contact.lead': 'Consulting, partnerships or questions about the hub — send us a message.',
