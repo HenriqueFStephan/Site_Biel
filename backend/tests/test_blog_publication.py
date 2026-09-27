@@ -194,3 +194,53 @@ def test_to_blog_post_carries_published_date():
     )
     blog = normalizer.to_blog_post(normalizer.normalize(raw))
     assert blog.published_date == "2025-03-15"
+
+
+ISSUE49_DOIS = [
+    "10.1111/tpj.16769",
+    "10.1038/s41598-024-58931-w",
+    "10.1002/agj2.21537",
+    "10.1371/journal.pone.0315951",
+    "10.1161/JAHA.123.030178",
+    "10.1001/jamanetworkopen.2024.34354",
+    "10.1001/jamainternmed.2024.3270",
+    "10.1001/jamapediatrics.2024.4352",
+    "10.1017/S0033291724000990",
+    "10.1001/jamahealthforum.2023.4897",
+    "10.1001/jamapsychiatry.2024.0698",
+    "10.1016/j.jaac.2024.02.016",
+    "10.1016/j.jclepro.2024.143689",
+    "10.1016/j.clce.2024.100123",
+    "10.1016/j.indcrop.2024.118487",
+]
+
+
+def test_issue49_research_posts_are_published():
+    from fastapi.testclient import TestClient
+
+    from app.main import app
+    from app.repositories.json_store import blog_store
+
+    api = TestClient(app)
+    response = api.get("/api/v1/blog")
+    assert response.status_code == 200
+    rows = response.json()
+    citations = " ".join(row.get("citation") or "" for row in rows)
+    for doi in ISSUE49_DOIS:
+        assert doi in citations
+
+    seed_rows = blog_store.read_all()
+    issue49_rows = [
+        row
+        for row in seed_rows
+        if row.get("id", "").startswith("blog-research-20260927-")
+    ]
+    assert len(issue49_rows) == 15
+    for row in issue49_rows:
+        assert row.get("source_type") == "agent_research"
+        assert row.get("title_pt")
+        assert row.get("i18n", {}).get("en", {}).get("excerpt")
+        assert "## Por que importa" in row.get("content_markdown", "")
+        assert row.get("research_institution")
+        assert row.get("research_country_code")
+        assert "PLACEHOLDER" not in row.get("content_markdown", "")
