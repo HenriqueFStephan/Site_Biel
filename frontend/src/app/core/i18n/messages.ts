@@ -81,7 +81,7 @@ export const ptBR = {
     'Estratégia do início à operação: conectamos projeto, infraestrutura, cultivo, processamento e gestão para transformar investimentos em operações produtivas estruturadas, eficientes e preparadas para o mercado.',
   'services.loading': 'Carregando serviços…',
   'services.error': 'Não foi possível carregar os serviços.',
-  'services.ctaTitle': 'Pronto para estruturar seu projeto?',
+  'services.ctaTitle': 'Seu projeto começa aqui.',
   'services.ctaLead':
     'Agende uma conversa para mapear instalação, climatização, cultivo e compliance.',
   'services.ctaButton': 'Diagnóstico Gratuito',
