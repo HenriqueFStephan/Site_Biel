@@ -52,6 +52,15 @@
   color: $color-text-muted;
 }
 
+// Institution label column: +50% vs global .news-row (6.5rem → 9.75rem).
+.blog-news-rows .news-row {
+  grid-template-columns: 7.5rem 9.75rem minmax(0, 1fr) 1.5rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 8.25rem minmax(0, 1fr) 1.25rem;
+  }
+}
+
 .news-row .col-tag .tag + .tag {
   margin-left: 0.25rem;
 }
