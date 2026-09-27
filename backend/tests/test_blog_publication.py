@@ -59,13 +59,56 @@ def test_list_blog_sorted_by_publication_date():
     assert response.status_code == 200
     rows = response.json()
     assert rows
-    assert rows[0]["published_date"] == "2026-09-12"
+    assert rows[0]["published_date"] == "2026-09-18"
     assert rows[0]["slug"] == (
-        "a-randomized-four-period-cross-over-phase-i-study-to-assess-bioavailability-bioe"
+        "metabolomic-investigation-of-inflorescences-from-cannabis-sativa-l-variety-earli"
     )
 
     dates = [row.get("published_date") for row in rows if row.get("published_date")]
     assert dates == sorted(dates, reverse=True)
+
+
+ISSUE47_DOIS = [
+    "10.1186/s42238-026-00498-6",
+    "10.1038/s41598-026-59272-6",
+    "10.3390/sci8090261",
+    "10.14311/app.2026.59.0021",
+    "10.1001/jamanetworkopen.2026.31306",
+    "10.1021/acs.jnatprod.6c00674",
+    "10.1038/s41538-026-01158-y",
+    "10.1186/s42238-026-00489-7",
+    "10.1007/s10853-026-13577-z",
+    "10.1007/s10570-026-07205-x",
+]
+
+
+def test_issue47_research_posts_are_published():
+    from fastapi.testclient import TestClient
+
+    from app.main import app
+    from app.repositories.json_store import blog_store
+
+    api = TestClient(app)
+    response = api.get("/api/v1/blog")
+    assert response.status_code == 200
+    rows = response.json()
+    citations = " ".join(row.get("citation") or "" for row in rows)
+    for doi in ISSUE47_DOIS:
+        assert doi in citations
+
+    seed_rows = blog_store.read_all()
+    issue47_rows = [
+        row
+        for row in seed_rows
+        if row.get("id", "").startswith("blog-research-20260921-")
+    ]
+    assert len(issue47_rows) == 10
+    for row in issue47_rows:
+        assert row.get("source_type") == "agent_research"
+        assert row.get("title_pt")
+        assert row.get("i18n", {}).get("en", {}).get("excerpt")
+        assert "## Por que importa" in row.get("content_markdown", "")
+        assert "PLACEHOLDER" not in row.get("content_markdown", "")
 
 
 ISSUE28_DOIS = [

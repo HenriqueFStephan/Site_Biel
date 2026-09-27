@@ -828,14 +828,19 @@ def _post_has_doi(post: dict, doi: str) -> bool:
 
 
 def build_research_entry(post: dict) -> dict:
-    content = _ensure_min_words(post["content"])
-    en_content = _ensure_min_words(post["en_content"], minimum=400)
     citation = cite(
         post["authors"],
         post["year"],
         post["title"],
         post["journal"],
         post["doi"],
+    )
+    content = _ensure_min_words(
+        post["content"].replace("PLACEHOLDER_CITE", citation)
+    )
+    en_content = _ensure_min_words(
+        post["en_content"].replace("PLACEHOLDER_CITE_EN", citation),
+        minimum=400,
     )
     return {
         "id": post["id"],
