@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T13:09:40.974363+00:00",
+  "updated_at": "2026-09-28T07:10:37.914031+00:00",
   "notes": "Papers already posted in weekly research digest issues. The weekly paper report skips these DOIs/URLs.",
   "papers": [
     {
@@ -531,6 +531,138 @@
       "published": "2026-08-27",
       "category": "construction",
       "first_seen": "2026-09-21"
+    },
+    {
+      "title": "Development and stability evaluation of a low-complexity topical O/W emulsion containing CBD- and CBG-rich extracts",
+      "url": "https://doi.org/10.1186/s42238-026-00508-7",
+      "doi": "10.1186/s42238-026-00508-7",
+      "journal": "Journal of Cannabis Research",
+      "authors": "Juliana Feitoza Brasil et al.",
+      "year": 2026,
+      "published": "2026-09-18",
+      "category": "medical",
+      "first_seen": "2026-09-28"
+    },
+    {
+      "title": "Surveillance of healthcare utilisation related to cannabis following the introduction of medical cannabis in Thailand",
+      "url": "https://doi.org/10.1186/s42238-026-00495-9",
+      "doi": "10.1186/s42238-026-00495-9",
+      "journal": "Journal of Cannabis Research",
+      "authors": "Bundit Sornpaisarn et al.",
+      "year": 2026,
+      "published": "2026-09-02",
+      "category": "policy",
+      "first_seen": "2026-09-28"
+    },
+    {
+      "title": "The endocannabinoid system and cannabinoid-based therapies in chemotherapy-induced neuropathic pain: from preclinical promise to limited clinical evidence",
+      "url": "https://doi.org/10.1186/s12906-026-05585-y",
+      "doi": "10.1186/s12906-026-05585-y",
+      "journal": "BMC Complementary Medicine and Therapies",
+      "authors": "Delia Soriano et al.",
+      "year": 2026,
+      "published": "2026-09-18",
+      "category": "medical",
+      "first_seen": "2026-09-28"
+    },
+    {
+      "title": "The hidden route: associations between maternal patterns of cannabis use and concentration of cannabinoids in breastmilk",
+      "url": "https://doi.org/10.1186/s42238-026-00501-0",
+      "doi": "10.1186/s42238-026-00501-0",
+      "journal": "Journal of Cannabis Research",
+      "authors": "Cinthya R. Moshtagh et al.",
+      "year": 2026,
+      "published": "2026-09-09",
+      "category": "medical",
+      "first_seen": "2026-09-28"
+    },
+    {
+      "title": "UAV-based YOLOv11 system for automated detection and counting of male hemp plants bearing staminate flowers",
+      "url": "https://doi.org/10.1186/s42238-026-00507-8",
+      "doi": "10.1186/s42238-026-00507-8",
+      "journal": "Journal of Cannabis Research",
+      "authors": "Muhammad Umer Arshad et al.",
+      "year": 2026,
+      "published": "2026-09-16",
+      "category": "agronomy",
+      "first_seen": "2026-09-28"
+    },
+    {
+      "title": "Canadian taxation methods for cannabis: an examination of the impact of different tax methods based on legal products sold in Ontario",
+      "url": "https://doi.org/10.1186/s42238-026-00499-5",
+      "doi": "10.1186/s42238-026-00499-5",
+      "journal": "Journal of Cannabis Research",
+      "authors": "Bundit Sornpaisarn et al.",
+      "year": 2026,
+      "published": "2026-09-09",
+      "category": "policy",
+      "first_seen": "2026-09-28"
+    },
+    {
+      "title": "Effect of cement and metakaolin on the compressive response and numerical stability of hemp concrete",
+      "url": "https://doi.org/10.1007/s43939-026-00983-y",
+      "doi": "10.1007/s43939-026-00983-y",
+      "journal": "Discover Materials",
+      "authors": "Nisrine Berdai et al.",
+      "year": 2026,
+      "published": "2026-09-25",
+      "category": "construction",
+      "first_seen": "2026-09-28"
+    },
+    {
+      "title": "Proof-of-concept trial of PP-01 for mitigating cannabis withdrawal syndrome in participants with cannabis use disorder",
+      "url": "https://doi.org/10.1111/ajad.70202",
+      "doi": "10.1111/ajad.70202",
+      "journal": "The American Journal on Addictions",
+      "authors": "Ashley F. Slagle et al.",
+      "year": 2026,
+      "published": "2026-09-09",
+      "category": "medical",
+      "first_seen": "2026-09-28"
+    },
+    {
+      "title": "Edible Cannabis, Blood THC Concentrations, and Implications for Impaired Driving Policy",
+      "url": "https://doi.org/10.1001/jamanetworkopen.2026.31213",
+      "doi": "10.1001/jamanetworkopen.2026.31213",
+      "journal": "JAMA Network Open",
+      "authors": "José Ignacio Nazif-Munoz",
+      "year": 2026,
+      "published": "2026-08-31",
+      "category": "policy",
+      "first_seen": "2026-09-28"
+    },
+    {
+      "title": "Pharmacovigilance in medical cannabis therapy among physicians in Poland: pharmacovigilance knowledge, ADR reporting practice and cannabis-related safety reporting",
+      "url": "https://doi.org/10.3389/fpubh.2026.1915903",
+      "doi": "10.3389/fpubh.2026.1915903",
+      "journal": "Frontiers in Public Health",
+      "authors": "Dorota Kopciuch et al.",
+      "year": 2026,
+      "published": "2026-09-10",
+      "category": "policy",
+      "first_seen": "2026-09-28"
+    },
+    {
+      "title": "Industrial Hemp Response to Waterlogging Stress: Influence of Duration and Growth Stage on Physiological Performance and Yield",
+      "url": "https://doi.org/10.3390/crops6050090",
+      "doi": "10.3390/crops6050090",
+      "journal": "Crops",
+      "authors": "Induni Vijaya Kumar et al.",
+      "year": 2026,
+      "published": "2026-09-25",
+      "category": "agronomy",
+      "first_seen": "2026-09-28"
+    },
+    {
+      "title": "Designing textiles with 3D surfaces using hemp fiber and natural dyes",
+      "url": "https://doi.org/10.47481/yjad.1945143",
+      "doi": "10.47481/yjad.1945143",
+      "journal": "Yıldız Journal of Art And Design",
+      "authors": "Merve Soybas",
+      "year": 2026,
+      "published": "2026-09-22",
+      "category": "textile",
+      "first_seen": "2026-09-28"
     }
   ]
 }
