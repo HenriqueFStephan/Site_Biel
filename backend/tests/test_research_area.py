@@ -46,7 +46,7 @@ def test_infer_regulatorio_from_policy_tag():
 
 
 def test_list_blog_includes_research_area():
-    response = client.get("/api/v1/blog")
+    response = client.get("/api/v1/blog", params={"limit": 100})
     assert response.status_code == 200
     rows = response.json()
     assert rows

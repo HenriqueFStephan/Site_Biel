@@ -55,13 +55,13 @@ def test_list_blog_sorted_by_publication_date():
     from app.main import app
 
     api = TestClient(app)
-    response = api.get("/api/v1/blog")
+    response = api.get("/api/v1/blog", params={"limit": 100})
     assert response.status_code == 200
     rows = response.json()
     assert rows
-    assert rows[0]["published_date"] == "2026-09-18"
+    assert rows[0]["published_date"] == "2026-09-25"
     assert rows[0]["slug"] == (
-        "metabolomic-investigation-of-inflorescences-from-cannabis-sativa-l-variety-earli"
+        "industrial-hemp-response-to-waterlogging-stress-influence-of-duration-and-growth"
     )
 
     dates = [row.get("published_date") for row in rows if row.get("published_date")]
@@ -89,7 +89,7 @@ def test_issue47_research_posts_are_published():
     from app.repositories.json_store import blog_store
 
     api = TestClient(app)
-    response = api.get("/api/v1/blog")
+    response = api.get("/api/v1/blog", params={"limit": 100})
     assert response.status_code == 200
     rows = response.json()
     citations = " ".join(row.get("citation") or "" for row in rows)
@@ -134,7 +134,7 @@ def test_issue28_research_posts_are_published():
     from app.repositories.json_store import blog_store
 
     api = TestClient(app)
-    response = api.get("/api/v1/blog")
+    response = api.get("/api/v1/blog", params={"limit": 100})
     assert response.status_code == 200
     rows = response.json()
     citations = " ".join(row.get("citation") or "" for row in rows)
@@ -173,7 +173,7 @@ def test_list_blog_includes_research_institution_fields():
     from app.main import app
 
     api = TestClient(app)
-    response = api.get("/api/v1/blog")
+    response = api.get("/api/v1/blog", params={"limit": 100})
     assert response.status_code == 200
     research = [row for row in response.json() if row.get("source_type") == "agent_research"]
     assert research
@@ -215,6 +215,54 @@ ISSUE49_DOIS = [
 ]
 
 
+ISSUE60_DOIS = [
+    "10.1186/s42238-026-00507-8",
+    "10.3390/crops6050090",
+    "10.1007/s43939-026-00983-y",
+    "10.1186/s42238-026-00508-7",
+    "10.1186/s12906-026-05585-y",
+    "10.1186/s42238-026-00501-0",
+    "10.1111/ajad.70202",
+    "10.1186/s42238-026-00495-9",
+    "10.1186/s42238-026-00499-5",
+    "10.1001/jamanetworkopen.2026.31213",
+    "10.3389/fpubh.2026.1915903",
+    "10.47481/yjad.1945143",
+]
+
+
+def test_issue60_research_posts_are_published():
+    from fastapi.testclient import TestClient
+
+    from app.main import app
+    from app.repositories.json_store import blog_store
+
+    api = TestClient(app)
+    response = api.get("/api/v1/blog", params={"limit": 100})
+    assert response.status_code == 200
+    rows = response.json()
+    citations = " ".join(row.get("citation") or "" for row in rows)
+    for doi in ISSUE60_DOIS:
+        assert doi in citations
+
+    seed_rows = blog_store.read_all()
+    issue60_rows = [
+        row
+        for row in seed_rows
+        if row.get("id", "").startswith("blog-research-20260928-")
+    ]
+    assert len(issue60_rows) == 12
+    for row in issue60_rows:
+        assert row.get("source_type") == "agent_research"
+        assert row.get("title_pt")
+        assert row.get("i18n", {}).get("en", {}).get("excerpt")
+        assert "## Por que importa" in row.get("content_markdown", "")
+        assert row.get("research_institution")
+        assert row.get("research_country_code")
+        assert row.get("research_area")
+        assert "PLACEHOLDER" not in row.get("content_markdown", "")
+
+
 def test_issue49_research_posts_are_published():
     from fastapi.testclient import TestClient
 
@@ -222,7 +270,7 @@ def test_issue49_research_posts_are_published():
     from app.repositories.json_store import blog_store
 
     api = TestClient(app)
-    response = api.get("/api/v1/blog")
+    response = api.get("/api/v1/blog", params={"limit": 100})
     assert response.status_code == 200
     rows = response.json()
     citations = " ".join(row.get("citation") or "" for row in rows)
