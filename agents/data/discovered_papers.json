@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T07:10:37.914031+00:00",
+  "updated_at": "2026-10-05T07:15:51.197292+00:00",
   "notes": "Papers already posted in weekly research digest issues. The weekly paper report skips these DOIs/URLs.",
   "papers": [
     {
@@ -663,6 +663,127 @@
       "published": "2026-09-22",
       "category": "textile",
       "first_seen": "2026-09-28"
+    },
+    {
+      "title": "Cannabis Commercialization as a Modifiable Public Health Exposure",
+      "url": "https://doi.org/10.1001/jamapsychiatry.2026.2869",
+      "doi": "10.1001/jamapsychiatry.2026.2869",
+      "journal": "JAMA Psychiatry",
+      "authors": "Gilman et al.",
+      "year": 2026,
+      "published": "2026-09-16",
+      "category": "policy",
+      "first_seen": "2026-10-05"
+    },
+    {
+      "title": "Knowledge translation and evidence use in medicinal cannabis policy: An evidence brief on regulation, effectiveness, safety and stakeholder support in Colombia",
+      "url": "https://doi.org/10.1186/s12961-026-01527-9",
+      "doi": "10.1186/s12961-026-01527-9",
+      "journal": "Health Research Policy and Systems",
+      "authors": "Velásquez-Salazar et al.",
+      "year": 2026,
+      "published": "2026-09-07",
+      "category": "policy",
+      "first_seen": "2026-10-05"
+    },
+    {
+      "title": "Potential Role of CYP3A4 in Determining In Vivo Exposure to Cannabidiol (CBD) and its Active Metabolite 7-OH-CBD: Evidence from an In Vitro Study",
+      "url": "https://doi.org/10.1007/s13318-026-01032-y",
+      "doi": "10.1007/s13318-026-01032-y",
+      "journal": "European Journal of Drug Metabolism and Pharmacokinetics",
+      "authors": "Jaisupa et al.",
+      "year": 2026,
+      "published": "2026-09-11",
+      "category": "medical",
+      "first_seen": "2026-10-05"
+    },
+    {
+      "title": "Effectiveness and safety of cannabidiol in adult patients with epilepsy: A multicenter, retrospective study",
+      "url": "https://doi.org/10.1002/epi4.70331",
+      "doi": "10.1002/epi4.70331",
+      "journal": "Epilepsia Open",
+      "authors": "Sánchez-Gamino et al.",
+      "year": 2026,
+      "published": "2026-09-21",
+      "category": "medical",
+      "first_seen": "2026-10-05"
+    },
+    {
+      "title": "Energy Performance Evaluation and Indoor Environmental Quality Study of a Home Renovated Using Hempcrete",
+      "url": "https://doi.org/10.3390/buildings16183756",
+      "doi": "10.3390/buildings16183756",
+      "journal": "Buildings",
+      "authors": "Memari et al.",
+      "year": 2026,
+      "published": "2026-09-21",
+      "category": "construction",
+      "first_seen": "2026-10-05"
+    },
+    {
+      "title": "Health equity and unintentional pediatric cannabis ingestion",
+      "url": "https://doi.org/10.1186/s40621-026-00710-4",
+      "doi": "10.1186/s40621-026-00710-4",
+      "journal": "Injury Epidemiology",
+      "authors": "Blumberg et al.",
+      "year": 2026,
+      "published": "2026-09-04",
+      "category": "policy",
+      "first_seen": "2026-10-05"
+    },
+    {
+      "title": "(+)-Trans-Cannabidiol Is an Agonist at Human CB2 Receptors",
+      "url": "https://doi.org/10.1002/prp2.70325",
+      "doi": "10.1002/prp2.70325",
+      "journal": "Pharmacology Research & Perspectives",
+      "authors": "Burtchaell et al.",
+      "year": 2026,
+      "published": "2026-09-15",
+      "category": "medical",
+      "first_seen": "2026-10-05"
+    },
+    {
+      "title": "Dynamic mechanical analysis of alkali-treated flax/hemp yarn on SS304 wire mesh reinforced epoxy hybrid composites",
+      "url": "https://doi.org/10.3389/fmech.2026.1973220",
+      "doi": "10.3389/fmech.2026.1973220",
+      "journal": "Frontiers in Mechanical Engineering",
+      "authors": "Elayaraja et al.",
+      "year": 2026,
+      "published": "2026-10-01",
+      "category": "textile",
+      "first_seen": "2026-10-05"
+    },
+    {
+      "title": "Gibberellin pathway remodeling accompanies ethylene-driven sex reversal in Cannabis sativa",
+      "url": "https://doi.org/10.3389/fpls.2026.1905836",
+      "doi": "10.3389/fpls.2026.1905836",
+      "journal": "Frontiers in Plant Science",
+      "authors": "Roy et al.",
+      "year": 2026,
+      "published": "2026-09-09",
+      "category": "agronomy",
+      "first_seen": "2026-10-05"
+    },
+    {
+      "title": "Selenium Seed Pre-Sowing Treatment Duration Modulates Germination and Antioxidant Responses of Industrial Hemp (Cannabis sativa L.) Under Drought Stress",
+      "url": "https://doi.org/10.3390/agronomy16191917",
+      "doi": "10.3390/agronomy16191917",
+      "journal": "Agronomy",
+      "authors": "Varga et al.",
+      "year": 2026,
+      "published": "2026-10-02",
+      "category": "agronomy",
+      "first_seen": "2026-10-05"
+    },
+    {
+      "title": "Copper sulphate reduces Pythium root rot and powdery mildew development on greenhouse-grown cannabis (Cannabis sativa L. marijuana) plants",
+      "url": "https://doi.org/10.1080/07060661.2026.2716888",
+      "doi": "10.1080/07060661.2026.2716888",
+      "journal": "Canadian Journal of Plant Pathology",
+      "authors": "Punja et al.",
+      "year": 2026,
+      "published": "2026-09-23",
+      "category": "agronomy",
+      "first_seen": "2026-10-05"
     }
   ]
 }
